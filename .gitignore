@@ -2,9 +2,10 @@
 .vscode/
 
 # Ignore the generated files
-.aux
-.fdb_latexmk
-.files.log
-.out
-.pdf
-.synctex.gz
+resume.aux
+resume.fdb_latexmk
+resume.log
+resume.out
+resume.pdf
+resume.synctex.gz
+resume.fls
