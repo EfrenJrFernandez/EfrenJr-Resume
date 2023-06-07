@@ -1,0 +1,10 @@
+# Ignore the vscode file
+.vscode/
+
+# Ignore the generated files
+.aux
+.fdb_latexmk
+.files.log
+.out
+.pdf
+.synctex.gz

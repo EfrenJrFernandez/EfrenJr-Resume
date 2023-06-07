@@ -1,0 +1,203 @@
+%------------------------
+% Resume Template
+% Author : Anubhav Singh
+% Github : https://github.com/xprilion
+% License : MIT
+%------------------------
+
+%------------------------
+% List of stuff that will need to be changed in the future
+% Adding the CGPA
+% Changing the courses depending on the job application
+% Adding more hackathons & project experience
+% 
+
+\documentclass[a4paper,20pt]{article}
+
+ % Packages
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[pdftex]{hyperref}
+\usepackage{fancyhdr}
+
+%Added packages
+\usepackage{xcolor} 
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.530in}
+\addtolength{\evensidemargin}{-0.375in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.45in}
+\addtolength{\textheight}{1in}
+
+\urlstyle{rm}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-10pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-6pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item\small{
+    \textbf{#1}{: #2 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeItemWithoutTitle}[1]{
+  \item\small{
+    {\vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{#3} & \textit{#4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-3pt}}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-----------------------------
+%%%%%%  CV STARTS HERE  %%%%%%
+
+\begin{document}
+
+%----------HEADING-----------------
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \textbf{{\LARGE Efren Fernandez}} & Email: \href{mailto:}{efrenuyfernandez@gmail.com}\\
+  \href{https://xprilion.com}{Linkedin: https://www.linkedin.com/in/efren-jr/} & Mobile: 587-566-8573 \\
+  \href{https://github.com/EfrenJrFernandez?tab=projects}{Github: github.com/EfrenJrFernandez} \\
+\end{tabular*}
+%
+%%  Add logos of the places i've worked at
+%%  Add colors to the headers
+%%  ADD ICONS HERE
+%%
+%-----------EDUCATION-----------------
+\section{Education}
+    \vspace{-1pt}
+        \textbf{University of Alberta}\hspace{11 cm}
+        \textit{Edmonton, Canada}\\
+        \textit{Bachelor of Science in Electrical Engineering Co-op}\hspace{6 cm}
+        \textit{September 2018 - May 2023} \\
+        \vspace{-10pt}
+      {\scriptsize \textit{ \footnotesize{\newline{}\textbf{Courses: Power Electronics \textbullet{} Biophysical Measurements and Instrumentation \textbullet{} Digital Electronics \textbullet{} Data Analysis and Machine learning \textbullet{} Medical Robotics \textbullet{} Embedded Systems Design \textbullet{} Micro-fabrication Devices } }}}
+
+\section{Skills Summary}
+	\resumeSubHeadingListStart
+	\resumeSubItem{Languages}{~~~~~~~~Embedded C/C++, Python, Matlab, HTML, Javascript, LaTeX}
+	\resumeSubItem{Software Tools}{~~KiCAD, Altium, Git, SolidWorks, Visual Studio Code, nRF Connect, Cadence, stm32CubeMX, LTspice}
+	\resumeSubItem{Tools}{~~~~~~~~~~~~~~~~Oscilloscope, Signal generator, PCB Mill, FDM/Resin 3D printers, Soldering, Reflow Oven}
+    \resumeSubItem{Hardware}{~~~~~~~~~Nordic, STM32, Arduino, ESP32, Teensy, Atmel}
+    \resumeSubItem{Other Skills}{~~~~~~Familiar with Agile Scrum Methodology, Fluent in Tagalog, Basketball player}
+\resumeSubHeadingListEnd
+\vspace{-3pt}
+
+\section{Experience}
+    \vspace{-1pt}
+        \textbf{Element 4}\hspace{13.5 cm}
+        \textit{}\\
+        \textit{IoT Developer, Research and Development} \hspace{7.5 cm}
+        \textit{April 2021 - August 2022} \\
+        \vspace{-8pt}
+        
+    \begin{itemize}
+        \item Designed, tested, assembled, and revised release candidate PCBs \vspace{-5pt}
+        \item  Wrote, implemented, and upgraded functional features on the firmware\vspace{-5pt}
+        \item Conducted research on the application of various harvesting techniques for IoT applications \vspace{-5pt}
+        \item Conducted, compiled, and presented experimental results on board/part modifications  \vspace{-5pt}
+        \item Developed small scale manufacturing plans \vspace{-5pt}
+        \item Collaborated with third parties on the case design and fabrication \vspace{-5pt}
+        \item Promoted and represented the company in networking events 
+    \end{itemize}
+
+    \vspace{-1pt}
+        \textbf{University of Alberta}\hspace{11.5 cm}
+        \textit{}\\
+        \textit{AR Curriculum Developer}\hspace{10 cm}
+        \textit{January 2021 - April 2021} \\
+        \vspace{-8pt}
+    \begin{itemize}
+        \item Collaborated with a professor to develop examples of applying augmented reality in an academic settings \vspace{-5pt}
+        \item Developed marker and marker-less AR examples to help student visualize complex concepts that may be hard to view in a traditional image \vspace{-5pt}
+        \item Worked on the front-end of the AR examples \vspace{-5pt}
+        \item Created CAD models using Solidworks for the AR examples  \vspace{-5pt}
+        \item Conducted research on applications of AR in classroom settings for an academic paper
+    \end{itemize}        
+
+%-----------PROJECTS-----------------
+% Format the projects like the experience
+\vspace{-8pt}
+\section{Projects}
+    \vspace{-1pt}
+        \textbf{Albertaloop} \hspace{12cm}
+        \vspace{2pt}
+        \textit{}\\
+        \textit{Electronics Team lead} \hspace{10.4cm}
+        \textit{September 2019 - Present}
+        \vspace{-6pt}
+    \begin{itemize}
+        \item Oversees designs made by my group with responsibilities include mentoring, organizing and revising designs \vspace{-5pt}
+        \item Participate and represent the group during conferences such as the Canadian Hyper-loop Conference  \vspace{-5pt}
+        \item Actively participate in designing various electronic systems in the pod \vspace{-5pt}
+        \item Collaborated with different sub-teams to integrate electronics throughout the pod
+    \end{itemize}
+
+    \vspace{-1pt}
+        \textbf{ECG/PPG Patch Integration for Health Gauge} \\
+        \textit{Group Leader} \hspace{11.6cm}
+        \textit{September 2022 - Present}
+        \vspace{-6pt}
+    \begin{itemize}
+        \item Designed electrical schematics to integrate ECG and IMU onto client's pre-existing design and prototypes \vspace{-5pt}
+        \item Developing firmware features to incorporate BLE and peripherals\vspace{-5pt}
+        \item Managed the group's meetings, deadlines and communication with the client
+    \end{itemize}
+
+    \vspace{-1pt}
+        \textbf{Catalytic Converter Deterrent Device} \\
+        \textit{Co-lead} \hspace{12.5cm}
+        \textit{October 2022 - Present}
+        \vspace{-6pt}
+    \begin{itemize}
+        \item Designing the electronics for a low power BLE device to track catalytic theft \vspace{-5pt}
+        \item Developing firmware to integrate theft detection and BLE communication 
+    \end{itemize}
+
+    \vspace{-1pt}
+        \textbf{Sentry Warning Device} \\
+        \textit{Personal} \hspace{12.3cm}
+        \textit{March 2021 - April 2021}
+        \vspace{-6pt}
+    \begin{itemize}
+        \item The device is used to inform my family members when I am conducting or attending meetings and classes \vspace{-5pt}
+        \item Designed the firmware and hardware to ring an alarm when it detects people approaching my door \vspace{-5pt}
+        \item Currently planning on integrating a script that will read my calendar to display it onto the device
+    \end{itemize}
+\end{document}
