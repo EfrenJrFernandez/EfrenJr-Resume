@@ -26,7 +26,10 @@
 \usepackage{fancyhdr}
 
 %Added packages
-\usepackage{xcolor} 
+\usepackage{xcolor} % For Adding colors
+\usepackage{graphicx} %For inserting images
+\usepackage{wrapfig}
+\graphicspath{{./images/}}
 
 \pagestyle{fancy}
 \fancyhf{} % clear all header and footer fields
@@ -89,29 +92,34 @@
 \begin{document}
 
 %----------HEADING-----------------
-\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-  \textbf{{\LARGE Efren Fernandez}} & Email: \href{mailto:}{efrenuyfernandez@gmail.com}\\
-  \href{https://xprilion.com}{Linkedin: https://www.linkedin.com/in/efren-jr/} & Mobile: 587-566-8573 \\
-  \href{https://github.com/EfrenJrFernandez?tab=projects}{Github: github.com/EfrenJrFernandez} \\
-\end{tabular*}
-%
-%%  Add logos of the places i've worked at
-%%  Add colors to the headers
-%%  ADD ICONS HERE
-%%
+% \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+%   \textbf{{\LARGE Efren Fernandez}} & Email: \href{mailto:}{efrenuyfernandez@gmail.com}\\
+%   \href{https://xprilion.com}{Linkedin: https://www.linkedin.com/in/efren-jr/} & Mobile: 587-566-8573 \\
+%   \href{https://github.com/EfrenJrFernandez?tab=projects}{Github: github.com/EfrenJrFernandez} \\
+% \end{tabular*}
+\begin{center}
+    {\huge \textbf{Efren Jr. Fernandez}} \vspace{5pt}\\ %Add space
+    \includegraphics[scale = 0.02]{images/Gmail_icon_(2020).png} \href{mailto:}{efrenuyfernandez@gmail.com} $\vert$
+    \includegraphics[scale = 0.02]{images/linkedin_logo.png} \href{https://www.linkedin.com/in/efren-jr/}{https://www.linkedin.com/in/efren-jr/} $\vert$ 
+    \includegraphics[scale = 0.15]{images/github-mark.png}
+    \href{https://github.com/EfrenJrFernandez}{https://github.com/EfrenJrFernandez}
+    
+\end{center}
+
+
 %-----------EDUCATION-----------------
 \section{Education}
     \vspace{-1pt}
-        \textbf{University of Alberta}\hspace{11 cm}
-        \textit{Edmonton, Canada}\\
-        \textit{Bachelor of Science in Electrical Engineering Co-op}\hspace{6 cm}
+        \textbf{University of Alberta} \hspace{10.7cm}
+        \textit{Edmonton, Canada} \\
+        \textit{BSc. in Electrical Engineering Co-op}\hspace{8.25 cm}
         \textit{September 2018 - May 2023} \\
         \vspace{-10pt}
       {\scriptsize \textit{ \footnotesize{\newline{}\textbf{Courses: Power Electronics \textbullet{} Biophysical Measurements and Instrumentation \textbullet{} Digital Electronics \textbullet{} Data Analysis and Machine learning \textbullet{} Medical Robotics \textbullet{} Embedded Systems Design \textbullet{} Micro-fabrication Devices } }}}
 
 \section{Skills Summary}
 	\resumeSubHeadingListStart
-	\resumeSubItem{Languages}{~~~~~~~~Embedded C/C++, Python, Matlab, HTML, Javascript, LaTeX}
+	\resumeSubItem{Languages}{~~~~~~~~Embedded C/C++, Python, LaTeX, Matlab, HTML, Javascript}
 	\resumeSubItem{Software Tools}{~~KiCAD, Altium, Git, SolidWorks, Visual Studio Code, nRF Connect, Cadence, stm32CubeMX, LTspice}
 	\resumeSubItem{Tools}{~~~~~~~~~~~~~~~~Oscilloscope, Signal generator, PCB Mill, FDM/Resin 3D printers, Soldering, Reflow Oven}
     \resumeSubItem{Hardware}{~~~~~~~~~Nordic, STM32, Arduino, ESP32, Teensy, Atmel}
@@ -123,10 +131,11 @@
     \vspace{-1pt}
         \textbf{Element 4}\hspace{13.5 cm}
         \textit{}\\
-        \textit{IoT Developer, Research and Development} \hspace{7.5 cm}
+        \textit{IoT Developer, Research and Development} \hspace{7.8 cm}
         \textit{April 2021 - August 2022} \\
-        \vspace{-8pt}
-        
+        \vspace{-18pt} 
+        \hspace{-1pt}
+
     \begin{itemize}
         \item Designed, tested, assembled, and revised release candidate PCBs \vspace{-5pt}
         \item  Wrote, implemented, and upgraded functional features on the firmware\vspace{-5pt}
@@ -136,63 +145,66 @@
         \item Collaborated with third parties on the case design and fabrication \vspace{-5pt}
         \item Promoted and represented the company in networking events 
     \end{itemize}
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     \vspace{-1pt}
-        \textbf{University of Alberta}\hspace{11.5 cm}
+        \textbf{University of Alberta}\hspace{3cm}
         \textit{}\\
         \textit{AR Curriculum Developer}\hspace{10 cm}
         \textit{January 2021 - April 2021} \\
-        \vspace{-8pt}
-    \begin{itemize}
-        \item Collaborated with a professor to develop examples of applying augmented reality in an academic settings \vspace{-5pt}
-        \item Developed marker and marker-less AR examples to help student visualize complex concepts that may be hard to view in a traditional image \vspace{-5pt}
-        \item Worked on the front-end of the AR examples \vspace{-5pt}
-        \item Created CAD models using Solidworks for the AR examples  \vspace{-5pt}
-        \item Conducted research on applications of AR in classroom settings for an academic paper
-    \end{itemize}        
+        \vspace{-18pt} 
+        \hspace{-3pt}
+        \begin{itemize}
+            \item Collaborated with a professor to develop examples of applying augmented reality in an academic settings \vspace{-5pt}
+            \item Developed marker and marker-less AR examples to help student visualize complex concepts that may be hard to view in a traditional image \vspace{-5pt}
+            \item Created the front-end of the AR examples \vspace{-5pt}
+            \item Created CAD models using Solidworks for the AR examples  \vspace{-5pt}
+            \item Conducted research on applications of AR in classroom settings for an academic paper
+        \end{itemize}        
 
 %-----------PROJECTS-----------------
-% Format the projects like the experience
 \vspace{-8pt}
 \section{Projects}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     \vspace{-1pt}
-        \textbf{Albertaloop} \hspace{12cm}
+        \textbf{Albertaloop} \hspace{1em}
         \vspace{2pt}
         \textit{}\\
-        \textit{Electronics Team lead} \hspace{10.4cm}
+        \textit{Electronics Team lead} \hspace{10.85cm}
         \textit{September 2019 - Present}
-        \vspace{-6pt}
+        \vspace{-5pt} 
+        \hspace{-10pt}
     \begin{itemize}
         \item Oversees designs made by my group with responsibilities include mentoring, organizing and revising designs \vspace{-5pt}
-        \item Participate and represent the group during conferences such as the Canadian Hyper-loop Conference  \vspace{-5pt}
+        \item Represented the group during conferences such as the Canadian Hyper-loop Conference  \vspace{-5pt}
         \item Actively participate in designing various electronic systems in the pod \vspace{-5pt}
         \item Collaborated with different sub-teams to integrate electronics throughout the pod
     \end{itemize}
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     \vspace{-1pt}
         \textbf{ECG/PPG Patch Integration for Health Gauge} \\
-        \textit{Group Leader} \hspace{11.6cm}
+        \textit{Group Leader} \hspace{12cm}
         \textit{September 2022 - Present}
-        \vspace{-6pt}
+        \vspace{-5pt}
+        \hspace{1em}
     \begin{itemize}
         \item Designed electrical schematics to integrate ECG and IMU onto client's pre-existing design and prototypes \vspace{-5pt}
         \item Developing firmware features to incorporate BLE and peripherals\vspace{-5pt}
         \item Managed the group's meetings, deadlines and communication with the client
     \end{itemize}
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     \vspace{-1pt}
         \textbf{Catalytic Converter Deterrent Device} \\
-        \textit{Co-lead} \hspace{12.5cm}
+        \textit{Co-lead} \hspace{13.25cm}
         \textit{October 2022 - Present}
         \vspace{-6pt}
     \begin{itemize}
         \item Designing the electronics for a low power BLE device to track catalytic theft \vspace{-5pt}
         \item Developing firmware to integrate theft detection and BLE communication 
     \end{itemize}
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     \vspace{-1pt}
         \textbf{Sentry Warning Device} \\
-        \textit{Personal} \hspace{12.3cm}
+        \textit{Personal} \hspace{12.8cm}
         \textit{March 2021 - April 2021}
         \vspace{-6pt}
     \begin{itemize}
