@@ -1,4 +1,4 @@
-\documentclass[a4paper,20pt]{article}
+\documentclass[letterpaper,20pt]{article}
 
  % Packages
 \usepackage{latexsym}
@@ -72,8 +72,19 @@
 \newcommand{\resumeItemListStart}{\begin{itemize}}
 \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
 
+
+
 %-----------------------------
 %%%%%%  CV STARTS HERE  %%%%%%
+
+\begin{comment}
+  - Change to letter scriptsize
+  - Add more embedded experience e.g. RTOS etc
+  - Add more space if possible
+  - Other in skills summary to Personal Highlights or Unique Skills
+  - Work on standardizing the spacing between sections via functions
+\end{comment}
+
 
 \begin{document}
 
@@ -82,7 +93,7 @@
     {\huge \textbf{Efren Jr. Fernandez}} \vspace{5pt}\\ %Add space
     \includegraphics[height = 10pt]{images/Gmail_icon_(2020).png} \href{mailto:}{efrenuyfernandez@gmail.com} $\vert$
     \includegraphics[height = 10pt]{phone.png}
-    587-566-8573 $\vert$
+    +1 587-566-8573 $\vert$
     \includegraphics[height = 10pt]{images/linkedin_logo.png} \href{https://www.linkedin.com/in/efren-jr/}{https://www.linkedin.com/in/efren-jr/}  
     
 \end{center}
@@ -96,16 +107,16 @@
         \textit{BSc. in Electrical Engineering Co-op}\hspace{8.25 cm}
         \textit{September 2018 - May 2023} \\
         \vspace{-10pt}
-      {\scriptsize \textit{ \footnotesize{\newline{}\textbf{Courses: Embedded Systems Design \textbullet{} Power Electronics \textbullet{} Biophysical Measurements and Instrumentation \textbullet{} Digital Electronics \textbullet{} Data Analysis and Machine learning \textbullet{} Medical Robotics \textbullet{} Micro-fabrication Devices } }}}
+      {\scriptsize \textit{ \footnotesize{\newline{}\textbf{Relevant Courses: Embedded Systems Design \textbullet{} Power Electronics \textbullet{} Biophysical Measurements and Instrumentation \textbullet{} Digital Electronics \textbullet{} Data Analysis and Machine learning \textbullet{} Medical Robotics \textbullet{} Micro-fabrication Devices } }}}
 
 \section{Skills Summary}
 	\resumeSubHeadingListStart
-	\resumeSubItem{Languages}{\hspace{3em}Embedded C/C, Python, LaTeX, Matlab, HTML}
-	\resumeSubItem{Software Tools}{\hspace{0.8em}Altium, KiCAD, Git, SolidWorks, Visual Studio, nRF Connect, Cadence, MS Office, LTspice}
-	\resumeSubItem{Tools}{\hspace{5.5em}Oscilloscope, Signal generator, Soldering, Reflow Oven, PCB Mill, FDM/Resin 3D printers}
+	  \resumeSubItem{Languages}{\hspace{3em}Embedded C, Python, LaTeX, Matlab, HTML}
+	  \resumeSubItem{Software Tools}{\hspace{0.8em}Altium, KiCAD, Git, SolidWorks, Visual Studio, nRF Connect, Cadence, FreeRTOS, Zephyr RTOS, LTspice}
+	  \resumeSubItem{Tools}{\hspace{5.5em}Oscilloscope, Signal generator, Soldering, Reflow Oven, PCB Mill, FDM/Resin 3D printers}
     \resumeSubItem{Hardware}{\hspace{3.3em}Nordic 52840, STM32, ESP32, Arduino, Teensy, Atmel}
-    \resumeSubItem{Other}{\hspace{5.3em}Familiar with Agile Scrum Methodology, Fluent in Tagalog, Basketball player, Willing to relocate}
-    \resumeSubHeadingListEnd
+    \resumeSubItem{Unique Skills}{\hspace{1.6em}Agile Scrum Methodology, MS Office, Fluent in Tagalog, Basketball player, Willing to relocate}
+  \resumeSubHeadingListEnd
 \vspace{-3pt}
 
 \section{Experience}
@@ -118,11 +129,13 @@
         \hspace{-1pt}
 
     \begin{itemize}
-        \item Designed, validated, improved, and assembled a working schematic and \textbf{PCB design} \vspace{-5pt}
+        \item Designed, validated, improved, and assembled a working schematic and \textbf{PCB design} for the release candidate design \vspace{-5pt}
+        \item Upgraded I2C firmware functionlity for new product features \vspace{-5pt}
         % \item  Improved testibility and reliability through firmware and hardware design \vspace{-5pt}
         \item Built, tested and verified experimental results on board/part modifications  \vspace{-5pt}
-        \item Conducted research on the application of various harvesting techniques for low power IoT applications \vspace{-5pt}
-        \item Researched and developed small scale manufacturing process plans \vspace{-5pt}
+        \item Conducted research on the application of various harvesting techniques for low power IoT devices \vspace{-5pt}
+        
+        % \item Researched and developed small scale manufacturing process plans \vspace{-5pt}
         \item Collaborated with third parties on the case design and fabrication \vspace{-5pt}
         \item Promoted and represented the company in networking events 
         
@@ -136,27 +149,27 @@
         \vspace{-18pt} 
         \hspace{-3pt}
         \begin{itemize}
-            \item Developed examples which utilized augmented reality to help students in remote learning \vspace{-5pt}
+            \item Developed applications which utilized augmented reality to help students during remote learning \vspace{-5pt}
             \item Created marker and marker-less AR examples to help student visualize complex concepts that may be hard to view in a traditional image \vspace{-5pt}
             \item Used HTML to develop a web page to display AR examples \vspace{-5pt}
-            \item Designed CAD models using \textbf{Solidworks and Blender} for the AR examples  \vspace{-5pt}
+            \item Created CAD models using \textbf{Solidworks and Blender} for the AR examples  \vspace{-5pt}
             \item Researched the applications of AR in classroom settings for an academic paper
         \end{itemize}        
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-    \vspace{-1pt}
-            \textbf{Alberta Computers for Schools}\hspace{3cm}
-            \textit{}\\
-            \textit{Computer Repair Technician}\hspace{9.9 cm}
-            \textit{May 2020 - August 2020} \\
-            \vspace{-18pt} 
-            \hspace{-3pt}
-            \begin{itemize}
-                \item Increased production by 25\% within the first month joining \vspace{-5pt}
-                \item Developed new refurbishing protocols and created a new user guide to onboard new members \vspace{-5pt}
-                \item Learned basic warehouse shipping and receiving skills \vspace{-5pt}
-                \item Developed excellent leadership and communication skills through supervising the team 
-            \end{itemize}    
+    % \vspace{-1pt}
+    %         \textbf{Alberta Computers for Schools}\hspace{3cm}
+    %         \textit{}\\
+    %         \textit{Computer Repair Technician}\hspace{9.9 cm}
+    %         \textit{May 2020 - August 2020} \\
+    %         \vspace{-18pt} 
+    %         \hspace{-3pt}
+    %         \begin{itemize}
+    %             \item Increased production by 25\% within the first month joining \vspace{-5pt}
+    %             \item Developed new refurbishing protocols and created a new user guide to onboard new members \vspace{-5pt}
+    %             \item Learned basic warehouse shipping and receiving skills \vspace{-5pt}
+    %             \item Developed excellent leadership and communication skills through supervising the team 
+    %         \end{itemize}    
 
 %-----------PROJECTS-----------------
 \vspace{-8pt}
@@ -172,7 +185,7 @@
 \begin{itemize} %Keep it past tense
 \item Designed the schematics for a low power BLE device to track catalytic theft \vspace{-5pt}
 \item Developed firmware to integrate theft detection and BLE communication \vspace{-5pt}
-\item Made use of Zephyr RTOS to schedule and manage tasks in the firmware
+\item Consulted various industry experts regarding product design and patent feasibility 
 \end{itemize}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -184,6 +197,7 @@
 \begin{itemize}
 \item Designed, tested, and fabricated a working 4 layer PCB design to meet the client's specifications \vspace{-5pt}
 \item Designed the electrical schematics to integrate \textbf{ECG and IMU} onto the client's prototypes \vspace{-5pt}
+\item Developed low-level drivers for SPI functionality in firmware \vspace{-5pt}
 \item Used Solidworks to design and model the transparent enclosure for the project \vspace{-5pt}
 \item Managed the group's meetings, deadlines and communication with the client
 \end{itemize}
@@ -200,7 +214,7 @@
         \hspace{-10pt}
     \begin{itemize}
         \item Participated and demonstrated in the Canadian Hyperloop Conference \vspace{-5pt}
-        \item Designed and tested the navigation module containing \textbf{GPS, accelerometer and hall effect sensor for speed sensing} \vspace{-5pt} 
+        \item Designed the navigation module containing \textbf{GPS, accelerometer and hall effect sensor for speed sensing} \vspace{-5pt} 
         \item Oversaw the designs made by my group with responsibilities including mentoring, organizing, and revising designs \vspace{-5pt}
         \item Collaborated with different sub-teams to integrate electronics throughout the pod
     \end{itemize}
