@@ -1,5 +1,6 @@
 # Ignore the vscode file
 .vscode/
+resume-old/
 
 # Ignore the generated files
 resume.aux

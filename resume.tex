@@ -1,233 +1,254 @@
-\documentclass[letterpaper,20pt]{article}
+%============================================================================%
+%
+%	Efren Jr Fernandez 2024 Resume
+% 
+%
+%============================================================================%
 
- % Packages
-\usepackage{latexsym}
-\usepackage[empty]{fullpage}
-\usepackage{titlesec}
-\usepackage{marvosym}
-\usepackage[usenames,dvipsnames]{color}
-\usepackage{verbatim}
-\usepackage{enumitem}
-\usepackage[pdftex]{hyperref}
-\usepackage{fancyhdr}
+%============================================================================%
+%
+%	Document Preamble
+%
+%============================================================================%
 
-%Added packages
-\usepackage{xcolor} % For Adding colors
-\usepackage{graphicx} %For inserting images
-\usepackage{wrapfig}
-\graphicspath{{./images/}}
+%============================================================================%
+% Document Definition
+\documentclass[10pt,letterpaper]{article}	
 
-\pagestyle{fancy}
-\fancyhf{} % clear all header and footer fields
-\fancyfoot{}
-\renewcommand{\headrulewidth}{0pt}
-\renewcommand{\footrulewidth}{0pt}
+\usepackage[default]{raleway} % Font 
+\usepackage{setspace} % For linespacing
+\setstretch{1.2}
+\usepackage[none]{hyphenat} % Removing hyphens 
+\def\bulletspace{0.1mm} % Space between the bullet and characters for itemized lists
 
-% Adjust margins
-\addtolength{\oddsidemargin}{-0.530in}
-\addtolength{\evensidemargin}{-0.375in}
-\addtolength{\textwidth}{1in}
-\addtolength{\topmargin}{-.45in}
-\addtolength{\textheight}{1in}
+%============================================================================%
+% Packages Usep
 
-\urlstyle{rm}
-
-\raggedbottom
-\raggedright
-\setlength{\tabcolsep}{0in}
-
-% Sections formatting
-\titleformat{\section}{
-  \vspace{-10pt}\scshape\raggedright\large
-}{}{0em}{}[\color{black}\titlerule \vspace{-6pt}]
-
-%-------------------------
-% Custom commands
-\newcommand{\resumeItem}[2]{
-  \item\small{
-    \textbf{#1}{: #2 \vspace{-2pt}}
-  }
+\usepackage{color} % For setting custom colors
+\usepackage{paracol} % For displaying two breakable columns
+\usepackage[letterpaper]{geometry} % Defining page style 
+\geometry{top=1cm, bottom=1cm, left=1cm, right=1cm} % Setting the margins
+\setlength{\parindent}{0pt} % Removing indentation
+\usepackage{nopageno} % For removing page numbers
+\usepackage{lipsum} %Filling in random words
+\usepackage{fontawesome5} % Icon Package fonts can be found here: https://fontawesome.com/v5/search?q=project&o=r&m=free 
+\usepackage[hidelinks]{hyperref} % For making links
+\usepackage{enumitem} % For removing step seperation
+\setlist{nosep}
+\setlist[itemize,1]{label=$\bullet$} % Defines the style for bullet points
+%============================================================================%
+% Color Definitions
+\definecolor{header}{RGB}{34, 51, 59} 
+\definecolor{backgroundcolor}{RGB}{234, 224, 213}
+\colseprulecolor[RGB]{80, 80, 80} 
+\usepackage[dvipsnames]{xcolor}
+\usepackage[most]{tcolorbox}
+\pagecolor{backgroundcolor}
+%============================================================================%
+% Font Definition
+%============================================================================%
+%
+%	Custom Functions
+%
+%============================================================================%
+% Creates the headers for sections
+% \header[Icon][Header title]
+\newcommand{\header}[2] {
+    \vspace{10pt}
+        {\LARGE\faIcon{#1}}\hspace{0.5em}\textbf{\LARGE{\uppercase{#2} } }
+        \vspace{-5pt} \\
+        \rule{0.1 \textwidth}{1pt}\hfill \\
+} 
+% Creates bullet points for the left hand side points
+\newcommand{\bulletp}{
+    \textbullet \hspace{\bulletspace}
 }
-
-\newcommand{\resumeItemWithoutTitle}[1]{
-  \item\small{
-    {\vspace{-2pt}}
-  }
+% Creates the header that is used for work experience and personal projects
+% \ExperienceHeader{Company/Project Name}{Job Title}{Dates}
+\newcommand{\ExperienceHeader}[3] {
+    \textbf{\large{#1} }
+    \hfill
+    {#3}\\
+    \textit{#2}\\
+    \vspace{-1em}
 }
-
-\newcommand{\resumeSubheading}[4]{
-  \vspace{-1pt}\item
-    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-      \textbf{#1} & #2 \\
-      \textit{#3} & \textit{#4} \\
-    \end{tabular*}\vspace{-5pt}
-}
-
-\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-3pt}}
-
-\renewcommand{\labelitemii}{$\circ$}
-
-\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
-\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
-\newcommand{\resumeItemListStart}{\begin{itemize}}
-\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
-
-
-
-%-----------------------------
-%%%%%%  CV STARTS HERE  %%%%%%
-
-\begin{comment}
-  - Change to letter scriptsize
-  - Add more embedded experience e.g. RTOS etc
-  - Add more space if possible
-  - Other in skills summary to Personal Highlights or Unique Skills
-  - Work on standardizing the spacing between sections via functions
-\end{comment}
-
-
+%============================================================================%
+%
+%	Document Begins
+%
+%============================================================================%
 \begin{document}
+\columnratio{0.31}
+\setlength{\columnsep}{2em}
+\setlength{\columnseprule}{1.2pt}
+\thispagestyle{empty} % Remove page number
 
-%----------HEADING-----------------
-\begin{center}
-    {\huge \textbf{Efren Jr. Fernandez}} \vspace{5pt}\\ %Add space
-    \includegraphics[height = 10pt]{images/Gmail_icon_(2020).png} \href{mailto:}{efrenuyfernandez@gmail.com} $\vert$
-    \includegraphics[height = 10pt]{phone.png}
-    +1 587-566-8573 $\vert$
-    \includegraphics[height = 10pt]{images/linkedin_logo.png} \href{https://www.linkedin.com/in/efren-jr/}{https://www.linkedin.com/in/efren-jr/}  
+\begin{paracol}{2}
+%============================================================================%
+% left Hand Column
+\begin{leftcolumn}
+    %---- Contacts ----%
+    \vspace{1em}
+    \header{phone-square-alt}{CONTACT} 
+    \faIcon{envelope} \href{mailto: efrenuyfernandez@gmail.com}{efrenuyfernandez@gmail.com}\\
+    \faIcon{phone-alt} +1 587 566 8573\\
+    \faIcon{linkedin} \href{https://www.linkedin.com/in/efren-jr/}{Efren Jr. Fernandez}\\
+    \faIcon{github} \href{https://github.com/EfrenJrFernandez?tab=repositories}{EfrenJrFernandez}
     
-\end{center}
+    %---- Education ----%
+    \vspace{1em}
+    \header{university}{EDUCATION} 
+    \large{\textbf{University of Alberta} }\\
+    \small{\textit{BSc. Electrical Engineering Co-op} }\\
+    \small{\textit{September 2018 - May 2023} } \vspace{0.5em}
+    
+    {\small{\textbf{Relevant Courses:} Embedded Systems \\Design, Power Electronics, Biophysical \\Measurements \& Instrumentation, \\Digital Electronics, Data Analysis \& \\Machine Learning, Medical Robotics, \\Micro-fabrication \& Devices} }
 
-
-%-----------EDUCATION-----------------
-\section{Education}
-    \vspace{-1pt}
-        \textbf{University of Alberta} \hspace{10.7cm}
-        \textit{Edmonton, Canada} \\
-        \textit{BSc. in Electrical Engineering Co-op}\hspace{8.25 cm}
-        \textit{September 2018 - May 2023} \\
-        \vspace{-10pt}
-      {\scriptsize \textit{ \footnotesize{\newline{}\textbf{Relevant Courses: Embedded Systems Design \textbullet{} Power Electronics \textbullet{} Biophysical Measurements and Instrumentation \textbullet{} Digital Electronics \textbullet{} Data Analysis and Machine learning \textbullet{} Medical Robotics \textbullet{} Micro-fabrication Devices } }}}
-
-\section{Skills Summary}
-	\resumeSubHeadingListStart
-	  \resumeSubItem{Languages}{\hspace{3em}Embedded C, Python, LaTeX, Matlab, HTML}
-	  \resumeSubItem{Software Tools}{\hspace{0.8em}Altium, KiCAD, Git, SolidWorks, Visual Studio, nRF Connect, Cadence, FreeRTOS, Zephyr RTOS, LTspice}
-	  \resumeSubItem{Tools}{\hspace{5.5em}Oscilloscope, Signal generator, Soldering, Reflow Oven, PCB Mill, FDM/Resin 3D printers}
-    \resumeSubItem{Hardware}{\hspace{3.3em}Nordic 52840, STM32, ESP32, Arduino, Teensy, Atmel}
-    \resumeSubItem{Unique Skills}{\hspace{1.6em}Agile Scrum Methodology, MS Office, Fluent in Tagalog, Basketball player, Willing to relocate}
-  \resumeSubHeadingListEnd
-\vspace{-3pt}
-
-\section{Experience}
-    \vspace{-1pt}
-        \textbf{Element 4}\hspace{13.5 cm}
-        \textit{}\\
-        \textit{IoT Developer, Research and Development} \hspace{7.8 cm}
-        \textit{April 2021 - August 2022} \\
-        \vspace{-18pt} 
-        \hspace{-1pt}
-
+    %---- Skills ----%
+    \vspace{1em}
+    \header{cogs}{SKILLS}
+    \large{\textbf{Programming Languages} }\\
+    \vspace{-1.8em}
+    \raggedright{
+        \begin{table}[h!]
+            \begin{tabular}{p{7em} p{7em}}
+                \bulletp Embedded C & \bulletp Python \\
+                \bulletp LaTeX & \bulletp MATLAB \\
+                \bulletp HTML & \bulletp C++\\
+            \end{tabular}
+        \end{table}
+    } \\
+    \vspace{-8pt}
+    %---- Software Tools ----%
+    \large{\textbf{Software Tools} }\\
+    \vspace{-0.55em}
+    \raggedright{
+        \begin{table}[h!]
+            \begin{tabular}{p{7em} p{7em}}
+                \bulletp Altium & \bulletp KiCAD\\
+                \bulletp Git & \bulletp Bitbucket\\
+                \bulletp Solidworks & \bulletp VSCode\\
+                \bulletp Zephyr RTOS & \bulletp FreeRTOS\\
+                \bulletp nRF Connect & \bulletp Zoho Sprints\\
+                \bulletp NumPy & \bulletp Pandas\\
+                \bulletp Scikit-learn & \bulletp SVM\\
+                \bulletp Cadence & \bulletp LTspice\\
+                \bulletp Oracle VM & \bulletp Ubuntu\\
+                \multicolumn{2}{l}{\bulletp Jupyter Notebooks}\\
+                \multicolumn{2}{l}{\bulletp Microsoft Office Suite}\\
+            \end{tabular}
+        \end{table}
+    }
+    \vspace{-10pt}
+    %---- Hardware ----%
+    \large{\textbf{Hardware} }\\ % Add FDM and Resin 3D printing here
+    \vspace{-0.55em}
+    \raggedright{
+        \begin{table}[h!]
+            \begin{tabular}{p{7em} p{7em}}
+                \bulletp STM32 & \bulletp ESP32\\
+                \bulletp Nordic 52840 & \bulletp Arduino\\
+                \bulletp Teensy & \bulletp Atmel\\
+                \bulletp Soldering & \bulletp3D Printing\\
+                \multicolumn{2}{l}{\bulletp Raspberry Pi 4}\\
+                \multicolumn{2}{l}{\bulletp Electronic Test Equipment}\\
+                \multicolumn{2}{l}{\bulletp PCB Design \& Fabrication}\\
+                \multicolumn{2}{l}{\bulletp Schematic Design}\\
+            \end{tabular}
+        \end{table}
+    }
+    \vspace{-10pt}
+    %---- Unique Skills ----%
+    \large{\textbf{Unique Skills} }\\
+    \vspace{-0.55em}
+    \raggedright{
+        \begin{table}[h!]
+            \begin{tabular}{p{14em}}
+                \bulletp Agile Scrum Methadology\\
+                \bulletp Fluent in Tagalog\\
+                \bulletp Basketball Player\\
+                \bulletp Willing to Relocate\\
+            \end{tabular}
+        \end{table}
+    }
+\end{leftcolumn}
+%============================================================================%
+% Right Hand Column
+\begin{rightcolumn}
+    \begin{center}
+        % Main Text box header
+        \begin{tcolorbox}[colback=red!54!green!71!blue!79,%gray background
+            colframe=black,
+            width= 0.95\columnwidth,
+           ]
+           \begin{center}
+                \huge{ \textbf{ \textcolor{white}{\uppercase{Efren Jr. Fernandez} } } } \\
+                \vspace{-0.8em}
+                \textcolor{white}{ \rule{0.45\textwidth}{1pt} }\\
+                \large{ \textcolor{white}{Electrical Engineer in Training} }
+           \end{center}
+        \end{tcolorbox}  
+    \end{center} 
+    %---- Work Experience ----%
+    \header{briefcase}{Work Experience}
+    \textbf{\large{Element 4} }
+    \hfill\
+    {April 2021 - August 2021}\\
+    \textit{IoT Developer, Research and Development}
+    \hfill
+    {January 2022 - August 2022}\\
+    \vspace{-1em}
     \begin{itemize}
-        \item Designed, validated, improved, and assembled a working schematic and \textbf{PCB design} for the release candidate design \vspace{-5pt}
-        \item Upgraded I2C firmware functionlity for new product features \vspace{-5pt}
-        % \item  Improved testibility and reliability through firmware and hardware design \vspace{-5pt}
-        \item Built, tested and verified experimental results on board/part modifications  \vspace{-5pt}
-        \item Conducted research on the application of various harvesting techniques for low power IoT devices \vspace{-5pt}
-        
-        % \item Researched and developed small scale manufacturing process plans \vspace{-5pt}
-        \item Collaborated with third parties on the case design and fabrication \vspace{-5pt}
-        \item Promoted and represented the company in networking events 
-        
+        \item Designed, validated, improved, and assembled a working schematic and PCB design for the release candidate product
+        \item Upgraded I2C firmware functionlity for new product features
+        \item Built, tested, and verified experimental results during board and part \\modifications
+        \item Conducted research on the application of various harvesting techniques for low power IoT devices
+        \item Collaborated with third parties on the case design and fabrication
+        \item Promoted and represented the company during networking events
     \end{itemize}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-    \vspace{-1pt}
-        \textbf{University of Alberta}\hspace{3cm}
-        \textit{}\\
-        \textit{AR Curriculum Developer}\hspace{10.05 cm}
-        \textit{January 2021 - April 2021} \\
-        \vspace{-18pt} 
-        \hspace{-3pt}
-        \begin{itemize}
-            \item Developed applications which utilized augmented reality to help students during remote learning \vspace{-5pt}
-            \item Created marker and marker-less AR examples to help student visualize complex concepts that may be hard to view in a traditional image \vspace{-5pt}
-            \item Used HTML to develop a web page to display AR examples \vspace{-5pt}
-            \item Created CAD models using \textbf{Solidworks and Blender} for the AR examples  \vspace{-5pt}
-            \item Researched the applications of AR in classroom settings for an academic paper
-        \end{itemize}        
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-    % \vspace{-1pt}
-    %         \textbf{Alberta Computers for Schools}\hspace{3cm}
-    %         \textit{}\\
-    %         \textit{Computer Repair Technician}\hspace{9.9 cm}
-    %         \textit{May 2020 - August 2020} \\
-    %         \vspace{-18pt} 
-    %         \hspace{-3pt}
-    %         \begin{itemize}
-    %             \item Increased production by 25\% within the first month joining \vspace{-5pt}
-    %             \item Developed new refurbishing protocols and created a new user guide to onboard new members \vspace{-5pt}
-    %             \item Learned basic warehouse shipping and receiving skills \vspace{-5pt}
-    %             \item Developed excellent leadership and communication skills through supervising the team 
-    %         \end{itemize}    
-
-%-----------PROJECTS-----------------
-\vspace{-8pt}
-\section{Projects}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\vspace{-1pt}
-\textbf{Catalytic Converter Deterrent Device} \\
-\textit{Personal Project} \hspace{11.85cm}
-\textit{October 2022 - Present}
-\vspace{-6pt}
-\begin{itemize} %Keep it past tense
-\item Designed the schematics for a low power BLE device to track catalytic theft \vspace{-5pt}
-\item Developed firmware to integrate theft detection and BLE communication \vspace{-5pt}
-\item Consulted various industry experts regarding product design and patent feasibility 
-\end{itemize}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\vspace{-1pt}
-\textbf{ECG/PPG Patch Integration for Health Gauge} \\
-\textit{Group Leader} \hspace{11.5cm}
-\textit{September 2022 - April 2023}
-\vspace{-5pt}
-\begin{itemize}
-\item Designed, tested, and fabricated a working 4 layer PCB design to meet the client's specifications \vspace{-5pt}
-\item Designed the electrical schematics to integrate \textbf{ECG and IMU} onto the client's prototypes \vspace{-5pt}
-\item Developed low-level drivers for SPI functionality in firmware \vspace{-5pt}
-\item Used Solidworks to design and model the transparent enclosure for the project \vspace{-5pt}
-\item Managed the group's meetings, deadlines and communication with the client
-\end{itemize}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-    \vspace{-1pt}
-        \textbf{Albertaloop}
-        \vspace{2pt}
-        \textit{}\\
-        \textit{Electronics Team lead} \hspace{10.2cm}
-        \textit{September 2019 - March 2023}
-        \vspace{-5pt} 
-        \hspace{-10pt}
+    \vspace{5pt}
+    \ExperienceHeader{University of Alberta}{AR Curriculum Developer}{January 2021 - April 2021}
     \begin{itemize}
-        \item Participated and demonstrated in the Canadian Hyperloop Conference \vspace{-5pt}
-        \item Designed the navigation module containing \textbf{GPS, accelerometer and hall effect sensor for speed sensing} \vspace{-5pt} 
-        \item Oversaw the designs made by my group with responsibilities including mentoring, organizing, and revising designs \vspace{-5pt}
+        \item Developed web-based applications which utilized augmented reality to help students during remote learning
+        \item Created marker and marker-less AR examples to help students visualize complex concepts that may be hard to view as a traditional image
+        % \item Used HTML to develop a web page to display AR examples
+        \item Created CAD models using Solidworks and Blender
+        \item Researched the applications of AR in classroom settings for an academic paper
+    \end{itemize}
+    % \vspace{5pt}
+    % \ExperienceHeader{Alberta Computers for Schools}{Computer Repair Technician}{April 2020 - August 2020}
+    % \begin{itemize}
+    %     \item Increased production by 25\% within the first month joining
+    %     \item Developed new refurbishing protocols and created a new user guide to onboard new members
+    %     \item Learned basic warehouse shipping and receiving skills
+    %     \item Developed excellent leadership and communication skills through supervising the team 
+    % \end{itemize}
+    % \vspace{5pt}
+    %---- Personal Projects ----%
+    \header{project-diagram}{Personal Projects}
+    % \ExperienceHeader{Catalytic Converter Deterrent Device}{Personal Project}{January 2023 - Present}
+    % \begin{itemize}
+    %     \item Designed the schematics for a low power BLE device to track catalytic theft
+    %     \item Develo-ped firmware to integrate theft detection and BLE communication
+    %     \item Consulted various industry experts regarding product design and patent feasibility
+    % \end{itemize}
+    % \vspace{5pt}
+    \ExperienceHeader{Health Gauge ECG/PPG Patch}{Group Leader}{September 2022 - April 2023}
+    \begin{itemize}
+        \item Designed, tested, and fabricated a working 4 layer PCB design to meet the client’s specifications
+        \item Designed the electrical schematics to integrate ECG and IMU onto the \\client’s prototypes
+        \item Developed low-level drivers for SPI functionality in firmware
+        \item Used Solidworks to design and model the enclosure for the project
+        \item Managed group meetings, deadlines, and communication with the client
+    \end{itemize}
+    \vspace{5pt}
+    \ExperienceHeader{Albertaloop}{Electronics Team Lead}{Sepember 2019 - April 2023}
+    \begin{itemize}
+        \item Participated and demonstrated in the Canadian Hyperloop Conference
+        \item Designed the navigation module containing GPS, accelerometer, and hall effect sensor for speed sensing
+        \item Oversaw the designs made by my group with responsibilities including \\mentoring, organizing, and revising designs
         \item Collaborated with different sub-teams to integrate electronics throughout the pod
     \end{itemize}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-    % \vspace{-1pt}
-    %     \textbf{Sentry Warning Device} \\
-    %     \textit{Personal Project} \hspace{11.5cm}
-    %     \textit{March 2021 - April 2021}
-    %     \vspace{-6pt}
-    % \begin{itemize}
-    %     \item The device is used to inform my family members when I am conducting or attending meetings and classes \vspace{-5pt}
-    %     \item Designed the firmware and hardware to ring an alarm when it detects people approaching my door \vspace{-5pt}
-    %     \item Currently planning on integrating a script that will read my calendar to display it onto the device
-    % \end{itemize}
+\end{rightcolumn}
+\end{paracol}
 \end{document}
